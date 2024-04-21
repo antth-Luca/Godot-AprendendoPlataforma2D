@@ -1,0 +1,2 @@
+# Godot-AprendendoPlataforma2D
+ Repositório para versionamento de um jogo 2D plataforma criado com acompanhamento para aprender a fazê-lo na engine "Godot"
