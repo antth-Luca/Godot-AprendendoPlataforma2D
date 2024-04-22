@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://hlyu54xmb1h0"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_lndxe"]
+[ext_resource type="Texture2D" uid="uid://jny8swu13oid" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_ymdu4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ispp6"]
+atlas = ExtResource("2_ymdu4")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0badt"]
+atlas = ExtResource("2_ymdu4")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fnvt4"]
+animations = [{
+"frames": [{
+"duration": 8.0,
+"texture": SubResource("AtlasTexture_ispp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0badt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c2rdv"]
+
+[node name="player" type="CharacterBody2D"]
+position = Vector2(0, -15)
+collision_mask = 2
+script = ExtResource("1_lndxe")
+
+[node name="anim" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_fnvt4")
+autoplay = "default"
+frame_progress = 0.971713
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_c2rdv")
+
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
