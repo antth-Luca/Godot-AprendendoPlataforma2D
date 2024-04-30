@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://dheiwagnss4pd"]
+[gd_scene load_steps=25 format=3 uid="uid://dheiwagnss4pd"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_x00vs"]
 [ext_resource type="Texture2D" uid="uid://duifxks8jq5hy" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_y1jve"]
@@ -14,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://o7iadu4u00xo" path="res://prefabs/coin.tscn" id="11_2lmeq"]
 [ext_resource type="PackedScene" uid="uid://hom25noco7m4" path="res://prefabs/enemy_abobora.tscn" id="12_3foto"]
 [ext_resource type="PackedScene" uid="uid://ovq5c4oicdgu" path="res://prefabs/break_box.tscn" id="13_q3xs6"]
+[ext_resource type="Script" path="res://scripts/warning_sign.gd" id="15_31qna"]
+[ext_resource type="Texture2D" uid="uid://caolrq738vm2v" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="16_qof5x"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k02ai"]
 shader = ExtResource("6_bt2xf")
@@ -267,6 +269,9 @@ pattern_0 = SubResource("TileMapPattern_vau7m")
 pattern_1 = SubResource("TileMapPattern_od0ob")
 pattern_2 = SubResource("TileMapPattern_3bvko")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xn8uk"]
+size = Vector2(40, 23)
+
 [node name="world-01" type="Node2D"]
 position = Vector2(308, 119)
 script = ExtResource("1_x00vs")
@@ -408,3 +413,21 @@ position = Vector2(-270, 144)
 [node name="camera" type="Camera2D" parent="."]
 limit_left = 0
 editor_draw_limits = true
+
+[node name="warning_sign" type="Node2D" parent="."]
+position = Vector2(-120, 102)
+script = ExtResource("15_31qna")
+
+[node name="texture" type="Sprite2D" parent="warning_sign"]
+visible = false
+texture = ExtResource("16_qof5x")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="area_sign" type="Area2D" parent="warning_sign"]
+position = Vector2(0, 16)
+collision_layer = 2
+
+[node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_xn8uk")
