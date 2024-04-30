@@ -387,24 +387,24 @@ position = Vector2(-28, 101)
 [node name="break-box4" parent="boxes" instance=ExtResource("13_q3xs6")]
 position = Vector2(-12, 101)
 
+[node name="break-box5" parent="boxes" instance=ExtResource("13_q3xs6")]
+position = Vector2(492, -63)
+
+[node name="break-box6" parent="boxes" instance=ExtResource("13_q3xs6")]
+position = Vector2(508, -63)
+
+[node name="break-box7" parent="boxes" instance=ExtResource("13_q3xs6")]
+position = Vector2(524, -63)
+
+[node name="break-box8" parent="boxes" instance=ExtResource("13_q3xs6")]
+position = Vector2(540, -63)
+
+[node name="break-box9" parent="boxes" instance=ExtResource("13_q3xs6")]
+position = Vector2(556, -63)
+
 [node name="player" parent="." instance=ExtResource("3_23rkk")]
 position = Vector2(-270, 144)
 
 [node name="camera" type="Camera2D" parent="."]
 limit_left = 0
 editor_draw_limits = true
-
-[node name="break-box" parent="." instance=ExtResource("13_q3xs6")]
-position = Vector2(492, -63)
-
-[node name="break-box2" parent="." instance=ExtResource("13_q3xs6")]
-position = Vector2(508, -63)
-
-[node name="break-box3" parent="." instance=ExtResource("13_q3xs6")]
-position = Vector2(524, -63)
-
-[node name="break-box4" parent="." instance=ExtResource("13_q3xs6")]
-position = Vector2(540, -63)
-
-[node name="break-box5" parent="." instance=ExtResource("13_q3xs6")]
-position = Vector2(556, -63)

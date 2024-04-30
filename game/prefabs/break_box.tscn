@@ -1,7 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ovq5c4oicdgu"]
+[gd_scene load_steps=10 format=3 uid="uid://ovq5c4oicdgu"]
 
 [ext_resource type="Texture2D" uid="uid://b87aet4oow3i" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="1_octlh"]
 [ext_resource type="Script" path="res://scripts/break_box.gd" id="1_vf8sk"]
+[ext_resource type="Shader" path="res://shaders/hit_flash.gdshader" id="2_u4cj1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r5s8p"]
+shader = ExtResource("2_u4cj1")
+shader_parameter/active = false
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xwcph"]
 size = Vector2(16, 16)
@@ -60,11 +65,52 @@ tracks/1/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("texture:material:shader_parameter/active")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_is547"]
+resource_name = "hit_flash"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("texture:material:shader_parameter/active")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("texture:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 0.5), Vector2(1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2k12o"]
 _data = {
 "RESET": SubResource("Animation_ne7g6"),
-"hit": SubResource("Animation_i6ysx")
+"hit": SubResource("Animation_i6ysx"),
+"hit_flash": SubResource("Animation_is547")
 }
 
 [node name="break-box" type="CharacterBody2D"]
@@ -74,6 +120,7 @@ script = ExtResource("1_vf8sk")
 pieces = PackedStringArray("res://assets/Seasonal Tilesets/5 - Misc. universal tiles/brick-piece-01.png", "res://assets/Seasonal Tilesets/5 - Misc. universal tiles/brick-piece-02.png", "res://assets/Seasonal Tilesets/5 - Misc. universal tiles/brick-piece-03.png", "res://assets/Seasonal Tilesets/5 - Misc. universal tiles/brick-piece-04.png")
 
 [node name="texture" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_r5s8p")
 texture = ExtResource("1_octlh")
 region_enabled = true
 region_rect = Rect2(16, 16, 16, 16)
@@ -85,3 +132,5 @@ shape = SubResource("RectangleShape2D_xwcph")
 libraries = {
 "": SubResource("AnimationLibrary_2k12o")
 }
+
+[node name="spawn_coin" type="Marker2D" parent="."]
