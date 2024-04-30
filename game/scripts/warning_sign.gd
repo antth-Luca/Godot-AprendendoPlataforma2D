@@ -8,7 +8,7 @@ const lines : Array[String] = [
 	'É muito bom vê-lo por aqui',
 	'Espero que esteja preparado...',
 	'Pois a sua jornada...',
-	'está apenas COMEÇANDO!'
+	'está apenas COMEÇANDO!',
 ]
 
 func _unhandled_input(event):
