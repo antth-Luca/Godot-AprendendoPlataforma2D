@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://hlyu54xmb1h0"]
+[gd_scene load_steps=16 format=3 uid="uid://hlyu54xmb1h0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lndxe"]
 [ext_resource type="Texture2D" uid="uid://cvpnjakbn0xa4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_mpa0g"]
@@ -83,9 +83,12 @@ size = Vector2(12, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f7q58"]
 size = Vector2(16, 13)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5dgtp"]
+size = Vector2(14, 5)
+
 [node name="player" type="CharacterBody2D"]
 position = Vector2(0, -15)
-collision_mask = 22
+collision_mask = 94
 script = ExtResource("1_lndxe")
 
 [node name="anim" type="AnimatedSprite2D" parent="."]
@@ -120,4 +123,14 @@ position = Vector2(-8, 9)
 target_position = Vector2(-4, 0)
 collision_mask = 4
 
+[node name="head_collider" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 64
+
+[node name="head_collision" type="CollisionShape2D" parent="head_collider"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_5dgtp")
+debug_color = Color(0.662745, 0.513726, 0, 0.419608)
+
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]
