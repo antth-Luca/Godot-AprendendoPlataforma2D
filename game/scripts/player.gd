@@ -7,6 +7,7 @@ const JUMP_FORCE = -350.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var is_jumping := false
+var is_hurted := false
 var player_life := 10
 var knockback_vector := Vector2.ZERO
 var direction
@@ -40,12 +41,13 @@ func _physics_process(delta):
 		
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
+
 	_set_state()
 	move_and_slide()
 
 
 func _on_hurtbox_body_entered(body):
-	if body.is_in_group('enemies'):
+	if body.is_in_group("enemies"):
 		if player_life <= 0:
 			queue_free()
 		else:
@@ -60,15 +62,15 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 	
 	if knockback_force != Vector2.ZERO:
 		knockback_vector = knockback_force
+		
 		var knockback_tween := get_tree().create_tween()
 		knockback_tween.parallel().tween_property(self, "knockback_vector", Vector2.ZERO, duration)
 		animation.modulate = Color(1, 0.286, 0.314)
 		knockback_tween.parallel().tween_property(animation, "modulate", Color(1, 1, 1, 1), duration)
-
-
-func follow_camera(camera):
-	var camera_path = camera.get_path()
-	remote_transform.remote_path = camera_path
+		
+	is_hurted = true
+	await get_tree().create_timer(.3).timeout
+	is_hurted = false
 
 
 func _set_state():
@@ -79,5 +81,13 @@ func _set_state():
 	elif direction != 0:
 		state = "run"
 
+	if is_hurted:
+		state = "hurt"
+
 	if animation.name != state:
 		animation.play(state)
+
+
+func follow_camera(camera):
+	var camera_path = camera.get_path()
+	remote_transform.remote_path = camera_path

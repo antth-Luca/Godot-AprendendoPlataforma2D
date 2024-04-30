@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://hlyu54xmb1h0"]
+[gd_scene load_steps=15 format=3 uid="uid://hlyu54xmb1h0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lndxe"]
+[ext_resource type="Texture2D" uid="uid://cvpnjakbn0xa4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_mpa0g"]
 [ext_resource type="Texture2D" uid="uid://jny8swu13oid" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_ymdu4"]
 [ext_resource type="Texture2D" uid="uid://bpukob66e1yt0" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="3_rwxyu"]
 [ext_resource type="Texture2D" uid="uid://bs15dl7u8wqq4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="4_deoni"]
@@ -31,6 +32,14 @@ region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fnvt4"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mpa0g")
+}],
+"loop": true,
+"name": &"hurt",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 8.0,
 "texture": SubResource("AtlasTexture_ispp6")
@@ -102,13 +111,11 @@ debug_color = Color(0.94902, 0.109804, 0.486275, 0.419608)
 [node name="remote" type="RemoteTransform2D" parent="."]
 
 [node name="ray_right" type="RayCast2D" parent="."]
-visible = false
 position = Vector2(8, 9)
 target_position = Vector2(4, 0)
 collision_mask = 4
 
 [node name="ray_left" type="RayCast2D" parent="."]
-visible = false
 position = Vector2(-8, 9)
 target_position = Vector2(-4, 0)
 collision_mask = 4
