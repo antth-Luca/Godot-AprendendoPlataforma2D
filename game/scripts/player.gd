@@ -9,6 +9,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_jumping := false
 var player_life := 10
 var knockback_vector := Vector2.ZERO
+var direction
 
 @onready var animation := $anim as AnimatedSprite2D
 @onready var remote_transform := $remote as RemoteTransform2D
@@ -29,21 +30,17 @@ func _physics_process(delta):
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
+	direction = Input.get_axis("ui_left", "ui_right")
 	if direction:
 		velocity.x = direction * SPEED
 		animation.scale.x = direction
-		if !is_jumping:
-			animation.play("run")
-	elif is_jumping:
-			animation.play("jump")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		animation.play("idle")
 		
 	if knockback_vector != Vector2.ZERO:
 		velocity = knockback_vector
-
+	_set_state()
 	move_and_slide()
 
 
@@ -72,3 +69,15 @@ func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
 func follow_camera(camera):
 	var camera_path = camera.get_path()
 	remote_transform.remote_path = camera_path
+
+
+func _set_state():
+	var state = "idle"
+	
+	if !is_on_floor():
+		state = "jump"
+	elif direction != 0:
+		state = "run"
+
+	if animation.name != state:
+		animation.play(state)
