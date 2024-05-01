@@ -8,7 +8,6 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var is_jumping := false
 var is_hurted := false
-var player_life := 10
 var knockback_vector := Vector2.ZERO
 var direction
 
@@ -16,6 +15,8 @@ var direction
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var ray_right := $ray_right as RayCast2D
 @onready var ray_left := $ray_left as RayCast2D
+
+signal player_has_died()
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -54,10 +55,11 @@ func _on_hurtbox_body_entered(body):
 
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
-	if player_life > 0:
-		player_life -= 1
+	if Globals.player_life > 0:
+		Globals.player_life -= 1
 	else:
 		queue_free()
+		emit_signal('player_has_died')
 	
 	if knockback_force != Vector2.ZERO:
 		knockback_vector = knockback_force
