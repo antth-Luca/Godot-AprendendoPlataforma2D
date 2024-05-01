@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/Coin-Sprites/03_Coin-Sprites.png" id="28_gu2rk"]
 [ext_resource type="FontFile" uid="uid://b6qq4ymv8poni" path="res://assets/fonts/RevMiniPixel.ttf" id="29_qof3d"]
 [ext_resource type="Texture2D" uid="uid://dwq6eomn0ua6m" path="res://assets/Life-Counter-Icon.png" id="30_gkn1a"]
-[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://prefabs/pause_menu.tscn" id="31_hwh8h"]
+[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://scenes/pause_menu.tscn" id="31_hwh8h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k02ai"]
 shader = ExtResource("4_swes4")

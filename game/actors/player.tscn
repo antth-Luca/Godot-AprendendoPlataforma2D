@@ -108,11 +108,13 @@ shape = SubResource("RectangleShape2D_gynyx")
 position = Vector2(8, 9)
 target_position = Vector2(4, 0)
 collision_mask = 4
+hit_from_inside = true
 
 [node name="ray_left" type="RayCast2D" parent="."]
 position = Vector2(-8, 9)
 target_position = Vector2(-4, 0)
 collision_mask = 4
+hit_from_inside = true
 
 [node name="hurtbox" type="Area2D" parent="."]
 collision_layer = 32

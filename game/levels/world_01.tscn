@@ -30,7 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://dwq6eomn0ua6m" path="res://assets/Life-Counter-Icon.png" id="23_75f6c"]
 [ext_resource type="PackedScene" uid="uid://tehqrgf2uan6" path="res://actors/base_patrol.tscn" id="25_m5tbf"]
 [ext_resource type="PackedScene" uid="uid://gx4yq8g6gdci" path="res://prefabs/checkpoint.tscn" id="26_tafl3"]
-[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://prefabs/pause_menu.tscn" id="27_unkoe"]
+[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://scenes/pause_menu.tscn" id="27_unkoe"]
 [ext_resource type="AudioStream" uid="uid://dm35g680h5i5d" path="res://sounds/music/@awazixosh - its-time-for-an-adventure - (music).wav" id="32_dnq81"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k02ai"]
@@ -525,6 +525,12 @@ position = Vector2(340, -4)
 [node name="checkpoint" parent="checkpoints" instance=ExtResource("26_tafl3")]
 position = Vector2(593, -33)
 
+[node name="start_spawn_player" type="Marker2D" parent="."]
+position = Vector2(70, 140)
+
+[node name="player" parent="." instance=ExtResource("3_23rkk")]
+position = Vector2(70, 140)
+
 [node name="goal" parent="." instance=ExtResource("19_meqwx")]
 position = Vector2(1920, 108)
 next_level = "res://levels/world_02.tscn"
@@ -541,9 +547,6 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("21_ax0k4")
-
-[node name="player" parent="." instance=ExtResource("3_23rkk")]
-position = Vector2(70, 140)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -587,9 +590,9 @@ texture = SubResource("AnimatedTexture_ci730")
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "000"
 
 [node name="timer_container" type="HBoxContainer" parent="HUD/control/container"]
@@ -601,18 +604,18 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "TIME"
 
 [node name="timer_counter" type="Label" parent="HUD/control/container/timer_container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "00:00"
 
 [node name="score_container" type="HBoxContainer" parent="HUD/control/container"]
@@ -624,18 +627,18 @@ size_flags_vertical = 0
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "SCORE"
 
 [node name="score_counter" type="Label" parent="HUD/control/container/score_container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "00000"
 
 [node name="life_container" type="HBoxContainer" parent="HUD/control/container"]
@@ -653,24 +656,25 @@ texture = ExtResource("23_75f6c")
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "X"
 
 [node name="life_counter" type="Label" parent="HUD/control/container/life_container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
+theme_override_constants/outline_size = 8
 theme_override_fonts/font = ExtResource("22_85xjn")
-theme_override_font_sizes/font_size = 8
+theme_override_font_sizes/font_size = 16
 text = "00"
 
 [node name="pause_menu" parent="." instance=ExtResource("27_unkoe")]
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(362, 72)
+zoom = Vector2(2, 2)
 limit_left = 0
 limit_smoothed = true
 editor_draw_limits = true
