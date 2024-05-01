@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b42vcnjr7jo5y"
+path="res://.godot/imported/@mortisblack - damage - (enemy-falling).mp3-4111027e93ce2e5225cf0434898b8ae6.mp3str"
+
+[deps]
+
+source_file="res://sounds/effects/@mortisblack - damage - (enemy-falling).mp3"
+dest_files=["res://.godot/imported/@mortisblack - damage - (enemy-falling).mp3-4111027e93ce2e5225cf0434898b8ae6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

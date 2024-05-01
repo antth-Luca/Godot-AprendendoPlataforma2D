@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://bbkxythtpkfff"]
+[gd_scene load_steps=12 format=3 uid="uid://bbkxythtpkfff"]
 
 [ext_resource type="Texture2D" uid="uid://dy2u000ne6pqv" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hopping (16 x 32).png" id="1_dq0uj"]
 [ext_resource type="Script" path="res://scripts/cherry.gd" id="1_jqcp1"]
 [ext_resource type="Texture2D" uid="uid://dtu0dd2vw6353" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hurt (16 x 32).png" id="2_22bae"]
 [ext_resource type="PackedScene" uid="uid://d1f77nrn7st75" path="res://prefabs/hitbox.tscn" id="4_nwkhr"]
+[ext_resource type="AudioStream" uid="uid://b42vcnjr7jo5y" path="res://sounds/effects/@mortisblack - damage - (enemy-falling).mp3" id="5_qvpws"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tlpqy"]
 size = Vector2(14, 9)
@@ -65,3 +66,8 @@ autoplay = "hopping"
 position = Vector2(0, 5)
 shape = SubResource("RectangleShape2D_pldlt")
 debug_color = Color(0.807843, 0.321569, 0.662745, 0.419608)
+
+[node name="death_enemy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_qvpws")
+volume_db = -6.0
+pitch_scale = 1.3

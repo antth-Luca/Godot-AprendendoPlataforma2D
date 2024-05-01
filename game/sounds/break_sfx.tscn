@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj70g6yv023f"]
+
+[ext_resource type="AudioStream" uid="uid://cuklo7eyrxpr1" path="res://sounds/effects/@debsound - brick-debris-fall-06 - (brick broke).wav" id="1_0swm8"]
+
+[node name="break_sfx" type="AudioStreamPlayer"]
+stream = ExtResource("1_0swm8")
+volume_db = -16.0

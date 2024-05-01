@@ -1,7 +1,8 @@
-[gd_scene load_steps=14 format=3 uid="uid://gx4yq8g6gdci"]
+[gd_scene load_steps=15 format=3 uid="uid://gx4yq8g6gdci"]
 
 [ext_resource type="Script" path="res://scripts/checkpoint.gd" id="1_fvgvl"]
 [ext_resource type="Texture2D" uid="uid://diilmmboc5s6x" path="res://assets/checkpoint.png" id="1_laprf"]
+[ext_resource type="AudioStream" uid="uid://byxrenvg8p8bp" path="res://sounds/effects/@kleber_kgf - victory-midi-by-kleber-kgf - (checked checkpoint).mp3" id="3_r08s5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vunmx"]
 atlas = ExtResource("1_laprf")
@@ -100,6 +101,10 @@ autoplay = "unchecked"
 [node name="collision" type="CollisionShape2D" parent="."]
 position = Vector2(1, 4)
 shape = SubResource("RectangleShape2D_0my2k")
+
+[node name="checked_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_r08s5")
+pitch_scale = 1.1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

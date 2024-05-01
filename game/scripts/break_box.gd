@@ -10,6 +10,9 @@ const coin_instance = preload("res://prefabs/coin_rigid.tscn")
 @export var hitpoints := 3
 var impulse := 100
 
+@onready var break_sfx = $break_sfx
+@onready var hit_sfx = $hit_sfx
+
 func break_sprite():
 	for piece in pieces.size():
 		var piece_instance = box_pieces.instantiate()

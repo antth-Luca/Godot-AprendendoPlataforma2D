@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://hom25noco7m4"]
+[gd_scene load_steps=14 format=3 uid="uid://hom25noco7m4"]
 
 [ext_resource type="Texture2D" uid="uid://cftyi66g7qsk7" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Walking (16 x 16).png" id="1_256l4"]
 [ext_resource type="Script" path="res://scripts/enemy_abobora.gd" id="1_kn03r"]
 [ext_resource type="Texture2D" uid="uid://bxoja0qe2380b" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Hurt (16 x 16).png" id="3_0fbhk"]
 [ext_resource type="Texture2D" uid="uid://c3drb0ndd8i7v" path="res://assets/Sprite Pack 2/4 - Robo Pumpkin/Standing (16 x 16).png" id="4_bwcv7"]
 [ext_resource type="PackedScene" uid="uid://d1f77nrn7st75" path="res://prefabs/hitbox.tscn" id="5_qsgl1"]
+[ext_resource type="AudioStream" uid="uid://b42vcnjr7jo5y" path="res://sounds/effects/@mortisblack - damage - (enemy-falling).mp3" id="6_n5ps3"]
 
 [sub_resource type="Animation" id="Animation_w4pvg"]
 length = 0.001
@@ -215,3 +216,8 @@ collision_mask = 6
 position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_gv62r")
 debug_color = Color(0.941176, 0.133333, 0.509804, 0.419608)
+
+[node name="death_enemy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_n5ps3")
+volume_db = -6.0
+pitch_scale = 1.3

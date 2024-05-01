@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm35g680h5i5d"
+path="res://.godot/imported/@awazixosh - its-time-for-an-adventure - (music).wav-830a3dcb36e7138dd48e5c09af6820b4.sample"
+
+[deps]
+
+source_file="res://sounds/music/@awazixosh - its-time-for-an-adventure - (music).wav"
+dest_files=["res://.godot/imported/@awazixosh - its-time-for-an-adventure - (music).wav-830a3dcb36e7138dd48e5c09af6820b4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

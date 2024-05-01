@@ -1,10 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://hlyu54xmb1h0"]
+[gd_scene load_steps=18 format=3 uid="uid://hlyu54xmb1h0"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_lndxe"]
 [ext_resource type="Texture2D" uid="uid://cvpnjakbn0xa4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Hurt (32 x 32).png" id="2_mpa0g"]
 [ext_resource type="Texture2D" uid="uid://jny8swu13oid" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Idle (32 x 32).png" id="2_ymdu4"]
 [ext_resource type="Texture2D" uid="uid://bpukob66e1yt0" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Jumping (32 x 32).png" id="3_rwxyu"]
 [ext_resource type="Texture2D" uid="uid://bs15dl7u8wqq4" path="res://assets/Sprite Pack 2/2 - Mr. Mochi/Running (32 x 32).png" id="4_deoni"]
+[ext_resource type="AudioStream" uid="uid://fy31e6kn6llq" path="res://sounds/effects/@cjspellsfish - basic-retro-jump - (jump player).wav" id="6_wlm36"]
+[ext_resource type="AudioStream" uid="uid://ehpc5mwdl5q4" path="res://sounds/effects/@micahlg - male_hurt1 - (player-hurt).mp3" id="7_6ruhs"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ispp6"]
 atlas = ExtResource("2_ymdu4")
@@ -131,6 +133,16 @@ shape = SubResource("RectangleShape2D_5dgtp")
 debug_color = Color(0.662745, 0.513726, 0, 0.419608)
 
 [node name="remote" type="RemoteTransform2D" parent="."]
+
+[node name="jump_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_wlm36")
+volume_db = -6.078
+pitch_scale = 1.21
+
+[node name="hurt_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_6ruhs")
+volume_db = -6.0
+pitch_scale = 1.5
 
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]

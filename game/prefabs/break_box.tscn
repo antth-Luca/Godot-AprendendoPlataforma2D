@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ovq5c4oicdgu"]
+[gd_scene load_steps=11 format=3 uid="uid://ovq5c4oicdgu"]
 
 [ext_resource type="Texture2D" uid="uid://b87aet4oow3i" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Blocks (16 x 16).png" id="1_octlh"]
 [ext_resource type="Script" path="res://scripts/break_box.gd" id="1_vf8sk"]
 [ext_resource type="Shader" path="res://shaders/hit_flash.gdshader" id="2_u4cj1"]
+[ext_resource type="AudioStream" uid="uid://nyb3kundnw0i" path="res://sounds/effects/@njjjjjjjjjjjjjjjjjjjjjjjj - tap-on-shoulder - (hit on box).wav" id="5_d0fpq"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r5s8p"]
 shader = ExtResource("2_u4cj1")
@@ -135,3 +136,7 @@ libraries = {
 
 [node name="spawn_coin" type="Marker2D" parent="."]
 position = Vector2(0, -8)
+
+[node name="hit_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_d0fpq")
+volume_db = 6.0

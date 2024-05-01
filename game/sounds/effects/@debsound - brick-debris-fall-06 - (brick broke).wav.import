@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cuklo7eyrxpr1"
+path="res://.godot/imported/@debsound - brick-debris-fall-06 - (brick broke).wav-17bc3a2c2b0c711dc34a450098524040.sample"
+
+[deps]
+
+source_file="res://sounds/effects/@debsound - brick-debris-fall-06 - (brick broke).wav"
+dest_files=["res://.godot/imported/@debsound - brick-debris-fall-06 - (brick broke).wav-17bc3a2c2b0c711dc34a450098524040.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

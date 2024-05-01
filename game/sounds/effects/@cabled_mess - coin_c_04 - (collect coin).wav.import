@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfenb23v6bwyg"
+path="res://.godot/imported/@cabled_mess - coin_c_04 - (collect coin).wav-030c79e5e17dcd098d2cd51da2bb64cd.sample"
+
+[deps]
+
+source_file="res://sounds/effects/@cabled_mess - coin_c_04 - (collect coin).wav"
+dest_files=["res://.godot/imported/@cabled_mess - coin_c_04 - (collect coin).wav-030c79e5e17dcd098d2cd51da2bb64cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -15,6 +15,9 @@ var direction
 @onready var remote_transform := $remote as RemoteTransform2D
 @onready var ray_right := $ray_right as RayCast2D
 @onready var ray_left := $ray_left as RayCast2D
+@onready var jump_sfx = $jump_sfx
+@onready var break_sfx = preload("res://sounds/break_sfx.tscn")
+@onready var hurt_sfx = $hurt_sfx
 
 signal player_has_died()
 
@@ -27,6 +30,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_FORCE
 		is_jumping = true
+		jump_sfx.play()
 	elif is_on_floor():
 		is_jumping = false
 
@@ -48,6 +52,7 @@ func _physics_process(delta):
 
 
 func _on_hurtbox_body_entered(_body):
+	hurt_sfx.play()
 	if ray_right.is_colliding():
 		take_damage(Vector2(-200, -200))
 	elif ray_left.is_colliding():
@@ -99,6 +104,16 @@ func _on_head_collider_body_entered(body):
 		body.hitpoints -= 1
 		if body.hitpoints <= 0:
 			body.break_sprite()
+			play_break_sfx()
 		else:
 			body.animation_player.play('hit')
+			body.hit_sfx.play(0.1)
 			body.create_coin()
+
+
+func play_break_sfx():
+	var sound = break_sfx.instantiate()
+	get_parent().add_child(sound)
+	sound.play()
+	await sound.finished
+	sound.queue_free()

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ehpc5mwdl5q4"
+path="res://.godot/imported/@micahlg - male_hurt1 - (player-hurt).mp3-1b270b4c6d9f3d4a8453b7dfac1236fe.mp3str"
+
+[deps]
+
+source_file="res://sounds/effects/@micahlg - male_hurt1 - (player-hurt).mp3"
+dest_files=["res://.godot/imported/@micahlg - male_hurt1 - (player-hurt).mp3-1b270b4c6d9f3d4a8453b7dfac1236fe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

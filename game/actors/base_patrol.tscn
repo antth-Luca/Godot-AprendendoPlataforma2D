@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://tehqrgf2uan6"]
+[gd_scene load_steps=16 format=3 uid="uid://tehqrgf2uan6"]
 
 [ext_resource type="Script" path="res://scripts/rocket_cherry.gd" id="1_amfll"]
 [ext_resource type="Texture2D" uid="uid://biwr1fw05647o" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Flying (16 x 32).png" id="2_yksqr"]
 [ext_resource type="Texture2D" uid="uid://dr7nvhlsbev1s" path="res://assets/Sprite Pack 2/7 - Rocket Cherry/Hurt_Falling (16 x 32).png" id="3_dbid4"]
 [ext_resource type="PackedScene" uid="uid://d1f77nrn7st75" path="res://prefabs/hitbox.tscn" id="4_qrxhm"]
+[ext_resource type="AudioStream" uid="uid://b42vcnjr7jo5y" path="res://sounds/effects/@mortisblack - damage - (enemy-falling).mp3" id="5_kajl8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_synpr"]
 atlas = ExtResource("2_yksqr")
@@ -47,9 +48,24 @@ size = Vector2(12, 4)
 
 [sub_resource type="Curve2D" id="Curve2D_c21aq"]
 _data = {
-"points": PackedVector2Array(11.1488, 18.2841, -11.1488, -18.2841, 0, -1, 6.54064, -1.33786, -6.54064, 1.33786, -20, -8, -2.82437, 6.54064, 2.82437, -6.54064, -36, -25, 2.37841, -13.3786, -2.37841, 13.3786, -16, -23, 21.703, -2.52706, -21.703, 2.52706, -33, -10, -0.148651, -17.5408, 0.148651, 17.5408, -47, -1, -6.98659, -7.58119, 6.98659, 7.58119, -40, 12, -6.98659, -0.148651, 6.98659, 0.148651, -13, 12, 0, 0, 0, 0, 0, -1)
+"points": PackedVector2Array(10.6908, 28.9542, -10.6908, -28.9542, 0, 0, 23.4974, 7.12719, -23.4974, -7.12719, -22, -14, 2.00452, 10.6908, -2.00452, -10.6908, -32, -27, -7.12719, -0.445449, 7.12719, 0.445449, -25, -32, -6.57038, -14.8112, 6.57038, 14.8112, -20, -27, 0, 0, 0, 0, -24, -14, -0.111362, -21.4929, 0.111362, 21.4929, -50, -1, -13.0294, -0.890899, 13.0294, 0.890899, -39, 11, -4.67722, 7.90672, 4.67722, -7.90672, -14, 11, 0, 0, 0, 0, 0, 0)
 }
-point_count = 9
+point_count = 10
+
+[sub_resource type="Animation" id="Animation_l2id2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("path2D/path_follow2D:progress_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="Animation" id="Animation_bcmxm"]
 resource_name = "patrol"
@@ -68,21 +84,6 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
-[sub_resource type="Animation" id="Animation_l2id2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("path2D/path_follow2D:progress_ratio")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dbrla"]
 _data = {
 "RESET": SubResource("Animation_l2id2"),
@@ -92,7 +93,7 @@ _data = {
 [node name="base_patrol" type="Node2D"]
 
 [node name="rocket_cherry" type="CharacterBody2D" parent="."]
-position = Vector2(-36.0273, -20.5282)
+position = Vector2(-35.0617, -19.1192)
 collision_layer = 4
 script = ExtResource("1_amfll")
 enemy_score = 150
@@ -116,7 +117,7 @@ debug_color = Color(0.784314, 0.384314, 0.533333, 0.419608)
 curve = SubResource("Curve2D_c21aq")
 
 [node name="path_follow2D" type="PathFollow2D" parent="path2D"]
-position = Vector2(-36.0273, -20.5282)
+position = Vector2(-35.0617, -19.1192)
 progress = 47.3054
 rotates = false
 
@@ -130,5 +131,10 @@ libraries = {
 "": SubResource("AnimationLibrary_dbrla")
 }
 autoplay = "patrol"
+
+[node name="death_enemy" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_kajl8")
+volume_db = -6.0
+pitch_scale = 1.3
 
 [connection signal="body_entered" from="rocket_cherry/hitbox" to="rocket_cherry" method="_on_hitbox_body_entered"]
