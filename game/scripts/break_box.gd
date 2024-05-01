@@ -23,5 +23,6 @@ func break_sprite():
 func create_coin():
 	var coin = coin_instance.instantiate()
 	get_parent().call_deferred("add_child", coin)
-	coin.global_position = spawn_coin.global_position
+	coin.global_position.x = spawn_coin.global_position.x - 340
+	coin.global_position.y = spawn_coin.global_position.y + 4
 	coin.apply_impulse(Vector2(randi_range(-50, 50), -150))

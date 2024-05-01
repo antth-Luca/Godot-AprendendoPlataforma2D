@@ -317,7 +317,7 @@ script = ExtResource("1_x00vs")
 [node name="bg" type="ParallaxBackground" parent="."]
 
 [node name="05" type="ParallaxLayer" parent="bg"]
-position = Vector2(-332, -127)
+position = Vector2(6, -132)
 motion_mirroring = Vector2(432, 212)
 
 [node name="texture" type="Sprite2D" parent="bg/05"]
@@ -326,7 +326,7 @@ texture = ExtResource("4_km407")
 centered = false
 
 [node name="04" type="ParallaxLayer" parent="bg"]
-position = Vector2(-332, -127)
+position = Vector2(6, -132)
 motion_scale = Vector2(0.3, 1)
 motion_mirroring = Vector2(432, 0)
 
@@ -336,7 +336,7 @@ texture = ExtResource("5_s0bhe")
 centered = false
 
 [node name="03" type="ParallaxLayer" parent="bg"]
-position = Vector2(-332, -127)
+position = Vector2(6, -132)
 motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(432, 0)
 
@@ -348,7 +348,7 @@ texture = ExtResource("6_u5mwk")
 centered = false
 
 [node name="02" type="ParallaxLayer" parent="bg"]
-position = Vector2(-332, -127)
+position = Vector2(6, -132)
 motion_scale = Vector2(0.7, 1)
 motion_mirroring = Vector2(432, 0)
 
@@ -358,7 +358,7 @@ texture = ExtResource("7_nwv01")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="bg"]
-position = Vector2(-332, -127)
+position = Vector2(6, -132)
 motion_scale = Vector2(0.9, 1)
 motion_mirroring = Vector2(432, 0)
 
@@ -368,6 +368,7 @@ texture = ExtResource("8_qdsfk")
 centered = false
 
 [node name="level" type="TileMap" parent="."]
+position = Vector2(340, -4)
 tile_set = SubResource("TileSet_x06ss")
 format = 2
 layer_0/name = "liquidos"
@@ -377,7 +378,26 @@ layer_1/tile_data = PackedInt32Array(720877, 262144, 1, 720878, 262144, 1, 72087
 layer_2/name = "trees"
 layer_2/tile_data = PackedInt32Array(589811, 65538, 1, 589812, 589826, 1, 589822, 589826, 1, 524289, 65538, 1, 524299, 589826, 1, 524307, 589826, 1, 524303, 327682, 1, 589805, 327682, 1, -196575, 327682, 1, -196574, 327682, 1, 38, 65538, 1, 65582, 327682, 1, 655346, 65538, 5, 524279, 65538, 5, 655357, 65538, 5, 655359, 65538, 5, 589824, 65538, 5, 589826, 65538, 5, 589837, 65538, 5, 589838, 65538, 5, 589842, 65538, 5, 589844, 65538, 5, 589845, 65538, 5, 589852, 65538, 5, 589858, 65538, 5, 589859, 65538, 5, 524323, 589826, 1)
 
+[node name="warning_sign" type="Node2D" parent="."]
+position = Vector2(220, 98)
+script = ExtResource("15_31qna")
+
+[node name="texture" type="Sprite2D" parent="warning_sign"]
+visible = false
+texture = ExtResource("16_qof5x")
+region_enabled = true
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="area_sign" type="Area2D" parent="warning_sign"]
+position = Vector2(0, 16)
+collision_layer = 2
+
+[node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_xn8uk")
+
 [node name="plataformas" type="Node2D" parent="."]
+position = Vector2(340, -4)
 
 [node name="moving_plataform" parent="plataformas" instance=ExtResource("10_7kvvi")]
 position = Vector2(342, 110)
@@ -388,6 +408,7 @@ position = Vector2(374, 110)
 move_horizontal = false
 
 [node name="coins" type="Node2D" parent="."]
+position = Vector2(340, -4)
 
 [node name="coin" parent="coins" instance=ExtResource("11_2lmeq")]
 position = Vector2(374, -154)
@@ -408,6 +429,7 @@ position = Vector2(97, 86)
 position = Vector2(119, 86)
 
 [node name="enemies" type="Node2D" parent="."]
+position = Vector2(340, -4)
 
 [node name="pumpkin" parent="enemies" instance=ExtResource("12_3foto")]
 position = Vector2(53, 118)
@@ -431,6 +453,7 @@ position = Vector2(1332, 116)
 position = Vector2(1380, 141)
 
 [node name="boxes" type="Node2D" parent="."]
+position = Vector2(340, -4)
 
 [node name="break-box" parent="boxes" instance=ExtResource("13_q3xs6")]
 position = Vector2(-60, 101)
@@ -459,32 +482,17 @@ position = Vector2(540, -63)
 [node name="break-box9" parent="boxes" instance=ExtResource("13_q3xs6")]
 position = Vector2(556, -63)
 
+[node name="checkpoints" type="Node2D" parent="."]
+position = Vector2(340, -4)
+
+[node name="checkpoint" parent="checkpoints" instance=ExtResource("26_tafl3")]
+position = Vector2(593, -33)
+
+[node name="checkpoint2" parent="checkpoints" instance=ExtResource("26_tafl3")]
+position = Vector2(1469, 143)
+
 [node name="player" parent="." instance=ExtResource("3_23rkk")]
-position = Vector2(-270, 144)
-
-[node name="camera" type="Camera2D" parent="."]
-position = Vector2(255, 151)
-limit_left = 0
-limit_smoothed = true
-editor_draw_limits = true
-
-[node name="warning_sign" type="Node2D" parent="."]
-position = Vector2(-120, 102)
-script = ExtResource("15_31qna")
-
-[node name="texture" type="Sprite2D" parent="warning_sign"]
-visible = false
-texture = ExtResource("16_qof5x")
-region_enabled = true
-region_rect = Rect2(0, 0, 16, 16)
-
-[node name="area_sign" type="Area2D" parent="warning_sign"]
-position = Vector2(0, 16)
-collision_layer = 2
-
-[node name="collision" type="CollisionShape2D" parent="warning_sign/area_sign"]
-position = Vector2(0, -1.5)
-shape = SubResource("RectangleShape2D_xn8uk")
+position = Vector2(70, 140)
 
 [node name="HUD" type="CanvasLayer" parent="."]
 
@@ -496,7 +504,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("17_pvla3")
-default_minutes = 2
+default_minutes = 5
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 autostart = true
@@ -608,10 +616,10 @@ theme_override_fonts/font = ExtResource("22_85xjn")
 theme_override_font_sizes/font_size = 8
 text = "00"
 
-[node name="checkpoint" parent="." instance=ExtResource("26_tafl3")]
-position = Vector2(593, -33)
-
-[node name="checkpoint2" parent="." instance=ExtResource("26_tafl3")]
-position = Vector2(1469, 143)
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2(362, 72)
+limit_left = 0
+limit_smoothed = true
+editor_draw_limits = true
 
 [connection signal="timeout" from="HUD/control/clock_timer" to="HUD/control" method="_on_clock_timer_timeout"]

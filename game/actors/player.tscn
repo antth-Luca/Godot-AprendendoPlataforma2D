@@ -102,17 +102,6 @@ autoplay = "idle"
 position = Vector2(0, 7)
 shape = SubResource("RectangleShape2D_gynyx")
 
-[node name="hurtbox" type="Area2D" parent="."]
-collision_layer = 32
-collision_mask = 20
-
-[node name="collision2" type="CollisionShape2D" parent="hurtbox"]
-position = Vector2(0, 5.5)
-shape = SubResource("RectangleShape2D_f7q58")
-debug_color = Color(0.94902, 0.109804, 0.486275, 0.419608)
-
-[node name="remote" type="RemoteTransform2D" parent="."]
-
 [node name="ray_right" type="RayCast2D" parent="."]
 position = Vector2(8, 9)
 target_position = Vector2(4, 0)
@@ -123,6 +112,15 @@ position = Vector2(-8, 9)
 target_position = Vector2(-4, 0)
 collision_mask = 4
 
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 20
+
+[node name="collision2" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0, 5.5)
+shape = SubResource("RectangleShape2D_f7q58")
+debug_color = Color(0.94902, 0.109804, 0.486275, 0.419608)
+
 [node name="head_collider" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 64
@@ -131,6 +129,8 @@ collision_mask = 64
 position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_5dgtp")
 debug_color = Color(0.662745, 0.513726, 0, 0.419608)
+
+[node name="remote" type="RemoteTransform2D" parent="."]
 
 [connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_entered" from="head_collider" to="." method="_on_head_collider_body_entered"]
