@@ -92,7 +92,7 @@ _data = {
 [node name="base_patrol" type="Node2D"]
 
 [node name="rocket_cherry" type="CharacterBody2D" parent="."]
-position = Vector2(-27.7388, -30.7879)
+position = Vector2(-36.0273, -20.5282)
 collision_layer = 4
 script = ExtResource("1_amfll")
 enemy_score = 150
@@ -116,8 +116,8 @@ debug_color = Color(0.784314, 0.384314, 0.533333, 0.419608)
 curve = SubResource("Curve2D_c21aq")
 
 [node name="path_follow2D" type="PathFollow2D" parent="path2D"]
-position = Vector2(-27.7388, -30.7879)
-progress = 62.2157
+position = Vector2(-36.0273, -20.5282)
+progress = 47.3054
 rotates = false
 
 [node name="remote" type="RemoteTransform2D" parent="path2D/path_follow2D"]
@@ -131,5 +131,4 @@ libraries = {
 }
 autoplay = "patrol"
 
-[connection signal="animation_finished" from="rocket_cherry/anim" to="rocket_cherry" method="_on_anim_animation_finished"]
 [connection signal="body_entered" from="rocket_cherry/hitbox" to="rocket_cherry" method="_on_hitbox_body_entered"]
