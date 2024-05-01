@@ -47,7 +47,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 
-func _on_hurtbox_body_entered(body):
+func _on_hurtbox_body_entered(_body):
 	if ray_right.is_colliding():
 		take_damage(Vector2(-200, -200))
 	elif ray_left.is_colliding():

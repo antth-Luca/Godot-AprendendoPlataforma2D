@@ -37,7 +37,7 @@ func flip_direction():
 		texture.flip_h = false
 
 
-func kill_abobora_enemy(anim_name: StringName) -> void:
+func kill_abobora_enemy(_anim_name: StringName) -> void:
 	kill_and_score()
 
 
