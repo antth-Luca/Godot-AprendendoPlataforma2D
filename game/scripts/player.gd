@@ -47,18 +47,17 @@ func _physics_process(delta):
 
 
 func _on_hurtbox_body_entered(body):
-	if body.is_in_group("enemies"):
-		if player_life <= 0:
-			queue_free()
-		else:
-			if ray_right.is_colliding():
-				take_damage(Vector2(-200, -200))
-			elif ray_left.is_colliding():
-				take_damage(Vector2(200, -200))
+	if ray_right.is_colliding():
+		take_damage(Vector2(-200, -200))
+	elif ray_left.is_colliding():
+		take_damage(Vector2(200, -200))
 
 
 func take_damage(knockback_force := Vector2.ZERO, duration := 0.25):
-	player_life -= 1
+	if player_life > 0:
+		player_life -= 1
+	else:
+		queue_free()
 	
 	if knockback_force != Vector2.ZERO:
 		knockback_vector = knockback_force
