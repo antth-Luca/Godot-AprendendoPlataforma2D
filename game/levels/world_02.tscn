@@ -1,39 +1,39 @@
-[gd_scene load_steps=43 format=3 uid="uid://dheiwagnss4pd"]
+[gd_scene load_steps=43 format=3 uid="uid://tvk65cbcvo83"]
 
-[ext_resource type="Script" path="res://scripts/world_01.gd" id="1_x00vs"]
-[ext_resource type="Texture2D" uid="uid://duifxks8jq5hy" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_y1jve"]
-[ext_resource type="Texture2D" uid="uid://hr05my67ef62" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="2_vdwg4"]
-[ext_resource type="PackedScene" uid="uid://hlyu54xmb1h0" path="res://actors/player.tscn" id="3_23rkk"]
-[ext_resource type="Texture2D" uid="uid://0ellq1cd0pwu" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="4_km407"]
-[ext_resource type="Texture2D" uid="uid://dx4pdgfdmiave" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="5_s0bhe"]
-[ext_resource type="Shader" path="res://shaders/movement_clounds.gdshader" id="6_bt2xf"]
-[ext_resource type="Texture2D" uid="uid://b0tv8dxupobp8" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="6_u5mwk"]
-[ext_resource type="Texture2D" uid="uid://7goctjqcd2gr" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="7_nwv01"]
-[ext_resource type="Texture2D" uid="uid://btllroa4a4mr3" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="8_qdsfk"]
-[ext_resource type="Texture2D" uid="uid://cb62piufcueme" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="9_yis3j"]
-[ext_resource type="PackedScene" uid="uid://bdnj4jvlbs52g" path="res://prefabs/moving_plataform.tscn" id="10_7kvvi"]
-[ext_resource type="PackedScene" uid="uid://o7iadu4u00xo" path="res://prefabs/coin.tscn" id="11_2lmeq"]
-[ext_resource type="PackedScene" uid="uid://hom25noco7m4" path="res://prefabs/enemy_abobora.tscn" id="12_3foto"]
-[ext_resource type="PackedScene" uid="uid://ovq5c4oicdgu" path="res://prefabs/break_box.tscn" id="13_q3xs6"]
-[ext_resource type="Script" path="res://scripts/warning_sign.gd" id="15_31qna"]
-[ext_resource type="Texture2D" uid="uid://caolrq738vm2v" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="16_qof5x"]
-[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="17_pvla3"]
-[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Coin-Sprites/00_Coin-Sprites.png" id="18_ew10b"]
-[ext_resource type="PackedScene" uid="uid://ccihk80ve2b21" path="res://prefabs/goal.tscn" id="19_meqwx"]
-[ext_resource type="Texture2D" uid="uid://byt5ar30rr4lk" path="res://assets/Coin-Sprites/01_Coin-Sprites.png" id="19_r7qlh"]
-[ext_resource type="Script" path="res://scripts/transition.gd" id="20_gd1pf"]
-[ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://assets/Coin-Sprites/02_Coin-Sprites.png" id="20_k5nmi"]
-[ext_resource type="Shader" path="res://shaders/transition.gdshader" id="20_klmxh"]
-[ext_resource type="Script" path="res://scripts/color_rect.gd" id="21_ax0k4"]
-[ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/Coin-Sprites/03_Coin-Sprites.png" id="21_oefrs"]
-[ext_resource type="FontFile" uid="uid://b6qq4ymv8poni" path="res://assets/fonts/RevMiniPixel.ttf" id="22_85xjn"]
-[ext_resource type="Texture2D" uid="uid://dwq6eomn0ua6m" path="res://assets/Life-Counter-Icon.png" id="23_75f6c"]
-[ext_resource type="PackedScene" uid="uid://tehqrgf2uan6" path="res://actors/base_patrol.tscn" id="25_m5tbf"]
-[ext_resource type="PackedScene" uid="uid://gx4yq8g6gdci" path="res://prefabs/checkpoint.tscn" id="26_tafl3"]
-[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://prefabs/pause_menu.tscn" id="27_unkoe"]
+[ext_resource type="Script" path="res://scripts/world_01.gd" id="1_uc1xd"]
+[ext_resource type="Texture2D" uid="uid://0ellq1cd0pwu" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="2_4a55c"]
+[ext_resource type="Texture2D" uid="uid://dx4pdgfdmiave" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/4 - Cloud_cover_2.png" id="3_eqeon"]
+[ext_resource type="Shader" path="res://shaders/movement_clounds.gdshader" id="4_swes4"]
+[ext_resource type="Texture2D" uid="uid://b0tv8dxupobp8" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/3 - Cloud_cover_1.png" id="5_x2gxg"]
+[ext_resource type="Texture2D" uid="uid://7goctjqcd2gr" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="6_a1vwx"]
+[ext_resource type="Texture2D" uid="uid://btllroa4a4mr3" path="res://assets/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="7_lrvtm"]
+[ext_resource type="Texture2D" uid="uid://duifxks8jq5hy" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="8_ye8yt"]
+[ext_resource type="Texture2D" uid="uid://cb62piufcueme" path="res://assets/Seasonal Tilesets/5 - Misc. universal tiles/Water_frames (16 x 32).png" id="9_ia8tb"]
+[ext_resource type="Texture2D" uid="uid://hr05my67ef62" path="res://assets/Seasonal Tilesets/1 - Grassland/Grassland_entities (16 x 16).png" id="10_w542x"]
+[ext_resource type="Script" path="res://scripts/warning_sign.gd" id="11_5voye"]
+[ext_resource type="Texture2D" uid="uid://caolrq738vm2v" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="12_oukla"]
+[ext_resource type="PackedScene" uid="uid://bdnj4jvlbs52g" path="res://prefabs/moving_plataform.tscn" id="13_ckinr"]
+[ext_resource type="PackedScene" uid="uid://o7iadu4u00xo" path="res://prefabs/coin.tscn" id="14_blxh5"]
+[ext_resource type="PackedScene" uid="uid://hom25noco7m4" path="res://prefabs/enemy_abobora.tscn" id="15_aaa01"]
+[ext_resource type="PackedScene" uid="uid://tehqrgf2uan6" path="res://actors/base_patrol.tscn" id="16_gk8aa"]
+[ext_resource type="PackedScene" uid="uid://ovq5c4oicdgu" path="res://prefabs/break_box.tscn" id="17_a4v76"]
+[ext_resource type="PackedScene" uid="uid://gx4yq8g6gdci" path="res://prefabs/checkpoint.tscn" id="18_n2t4w"]
+[ext_resource type="PackedScene" uid="uid://ccihk80ve2b21" path="res://prefabs/goal.tscn" id="19_7er6q"]
+[ext_resource type="Script" path="res://scripts/transition.gd" id="20_iduin"]
+[ext_resource type="Shader" path="res://shaders/transition.gdshader" id="21_uk21s"]
+[ext_resource type="Script" path="res://scripts/color_rect.gd" id="22_jadc0"]
+[ext_resource type="PackedScene" uid="uid://hlyu54xmb1h0" path="res://actors/player.tscn" id="23_2e4wk"]
+[ext_resource type="Script" path="res://scripts/hud_manager.gd" id="24_com3m"]
+[ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Coin-Sprites/00_Coin-Sprites.png" id="25_jdamp"]
+[ext_resource type="Texture2D" uid="uid://byt5ar30rr4lk" path="res://assets/Coin-Sprites/01_Coin-Sprites.png" id="26_x0ysd"]
+[ext_resource type="Texture2D" uid="uid://dn4vcy65s8hmt" path="res://assets/Coin-Sprites/02_Coin-Sprites.png" id="27_kj18j"]
+[ext_resource type="Texture2D" uid="uid://bstuh08nhmt8u" path="res://assets/Coin-Sprites/03_Coin-Sprites.png" id="28_gu2rk"]
+[ext_resource type="FontFile" uid="uid://b6qq4ymv8poni" path="res://assets/fonts/RevMiniPixel.ttf" id="29_qof3d"]
+[ext_resource type="Texture2D" uid="uid://dwq6eomn0ua6m" path="res://assets/Life-Counter-Icon.png" id="30_gkn1a"]
+[ext_resource type="PackedScene" uid="uid://gjw2pxhwdu7r" path="res://prefabs/pause_menu.tscn" id="31_hwh8h"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_k02ai"]
-shader = ExtResource("6_bt2xf")
+shader = ExtResource("4_swes4")
 shader_parameter/move_speed = 0.05
 
 [sub_resource type="TileMapPattern" id="TileMapPattern_vau7m"]
@@ -46,7 +46,7 @@ tile_data = PackedInt32Array(0, 327682, 1)
 tile_data = PackedInt32Array(0, 589826, 1)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j5mrk"]
-texture = ExtResource("1_y1jve")
+texture = ExtResource("8_ye8yt")
 3:1/0 = 0
 3:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 3:1/0/physics_layer_0/angular_velocity = 0.0
@@ -201,7 +201,7 @@ texture = ExtResource("1_y1jve")
 4:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_audcw"]
-texture = ExtResource("9_yis3j")
+texture = ExtResource("9_ia8tb")
 0:0/animation_columns = 2
 0:0/animation_frame_0/duration = 1.0
 0:0/animation_frame_1/duration = 1.0
@@ -213,7 +213,7 @@ texture = ExtResource("9_yis3j")
 0:1/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3lml4"]
-texture = ExtResource("2_vdwg4")
+texture = ExtResource("10_w542x")
 1:1/size_in_atlas = Vector2i(3, 3)
 1:1/0 = 0
 1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -306,7 +306,7 @@ pattern_2 = SubResource("TileMapPattern_3bvko")
 size = Vector2(40, 23)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kqcyc"]
-shader = ExtResource("20_klmxh")
+shader = ExtResource("21_uk21s")
 shader_parameter/lines = 10.0
 shader_parameter/threshold = 0.0
 shader_parameter/line_color_a = Color(1, 1, 1, 1)
@@ -315,16 +315,16 @@ shader_parameter/line_color_b = Color(0, 0, 0, 1)
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_ci730"]
 frames = 4
 speed_scale = 1.5
-frame_0/texture = ExtResource("18_ew10b")
-frame_1/texture = ExtResource("19_r7qlh")
+frame_0/texture = ExtResource("25_jdamp")
+frame_1/texture = ExtResource("26_x0ysd")
 frame_1/duration = 1.0
-frame_2/texture = ExtResource("20_k5nmi")
+frame_2/texture = ExtResource("27_kj18j")
 frame_2/duration = 1.0
-frame_3/texture = ExtResource("21_oefrs")
+frame_3/texture = ExtResource("28_gu2rk")
 frame_3/duration = 1.0
 
-[node name="world-01" type="Node2D"]
-script = ExtResource("1_x00vs")
+[node name="world-02" type="Node2D"]
+script = ExtResource("1_uc1xd")
 
 [node name="bg" type="ParallaxBackground" parent="."]
 
@@ -334,7 +334,7 @@ motion_mirroring = Vector2(432, 212)
 
 [node name="texture" type="Sprite2D" parent="bg/05"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("4_km407")
+texture = ExtResource("2_4a55c")
 centered = false
 
 [node name="04" type="ParallaxLayer" parent="bg"]
@@ -344,7 +344,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="bg/04"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("5_s0bhe")
+texture = ExtResource("3_eqeon")
 centered = false
 
 [node name="03" type="ParallaxLayer" parent="bg"]
@@ -356,7 +356,7 @@ motion_mirroring = Vector2(432, 0)
 texture_repeat = 2
 material = SubResource("ShaderMaterial_k02ai")
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("6_u5mwk")
+texture = ExtResource("5_x2gxg")
 centered = false
 
 [node name="02" type="ParallaxLayer" parent="bg"]
@@ -366,7 +366,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="bg/02"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("7_nwv01")
+texture = ExtResource("6_a1vwx")
 centered = false
 
 [node name="01" type="ParallaxLayer" parent="bg"]
@@ -376,7 +376,7 @@ motion_mirroring = Vector2(432, 0)
 
 [node name="texture" type="Sprite2D" parent="bg/01"]
 scale = Vector2(1.5, 1.5)
-texture = ExtResource("8_qdsfk")
+texture = ExtResource("7_lrvtm")
 centered = false
 
 [node name="level" type="TileMap" parent="."]
@@ -392,11 +392,11 @@ layer_2/tile_data = PackedInt32Array(589811, 65538, 1, 589812, 589826, 1, 589822
 
 [node name="warning_sign" type="Node2D" parent="."]
 position = Vector2(220, 98)
-script = ExtResource("15_31qna")
+script = ExtResource("11_5voye")
 
 [node name="texture" type="Sprite2D" parent="warning_sign"]
 visible = false
-texture = ExtResource("16_qof5x")
+texture = ExtResource("12_oukla")
 region_enabled = true
 region_rect = Rect2(0, 0, 16, 16)
 
@@ -411,125 +411,124 @@ shape = SubResource("RectangleShape2D_xn8uk")
 [node name="plataformas" type="Node2D" parent="."]
 position = Vector2(340, -4)
 
-[node name="moving_plataform" parent="plataformas" instance=ExtResource("10_7kvvi")]
+[node name="moving_plataform" parent="plataformas" instance=ExtResource("13_ckinr")]
 position = Vector2(342, 110)
 distance = -192
 
-[node name="moving_plataform2" parent="plataformas" instance=ExtResource("10_7kvvi")]
+[node name="moving_plataform2" parent="plataformas" instance=ExtResource("13_ckinr")]
 position = Vector2(374, 110)
 move_horizontal = false
 
 [node name="coins" type="Node2D" parent="."]
 position = Vector2(340, -4)
 
-[node name="coin" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(374, -154)
 
-[node name="coin2" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin2" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(374, -134)
 
-[node name="coin3" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin3" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(374, -114)
 
-[node name="coin4" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin4" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(75, 86)
 
-[node name="coin5" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin5" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(97, 86)
 
-[node name="coin6" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin6" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(119, 86)
 
-[node name="coin7" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin7" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1548, 108)
 
-[node name="coin8" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin8" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1612, 108)
 
-[node name="coin9" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin9" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1580, 76)
 
-[node name="coin10" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin10" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1580, 140)
 
-[node name="coin11" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin11" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1556, 133)
 
-[node name="coin12" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin12" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1556, 84)
 
-[node name="coin13" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin13" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1604, 84)
 
-[node name="coin14" parent="coins" instance=ExtResource("11_2lmeq")]
+[node name="coin14" parent="coins" instance=ExtResource("14_blxh5")]
 position = Vector2(1604, 132)
 
 [node name="enemies" type="Node2D" parent="."]
 position = Vector2(340, -4)
 
-[node name="pumpkin" parent="enemies" instance=ExtResource("12_3foto")]
+[node name="pumpkin" parent="enemies" instance=ExtResource("15_aaa01")]
 position = Vector2(53, 118)
 
-[node name="pumpkin2" parent="enemies" instance=ExtResource("12_3foto")]
+[node name="pumpkin2" parent="enemies" instance=ExtResource("15_aaa01")]
 position = Vector2(280, 139)
 
-[node name="pumpkin3" parent="enemies" instance=ExtResource("12_3foto")]
+[node name="pumpkin3" parent="enemies" instance=ExtResource("15_aaa01")]
 position = Vector2(363, 140)
 
-[node name="rocket_chery" parent="enemies" instance=ExtResource("25_m5tbf")]
+[node name="rocket_chery" parent="enemies" instance=ExtResource("16_gk8aa")]
 position = Vector2(837, 127)
 
-[node name="rocket_chery2" parent="enemies" instance=ExtResource("25_m5tbf")]
+[node name="rocket_chery2" parent="enemies" instance=ExtResource("16_gk8aa")]
 position = Vector2(1276, 136)
 
-[node name="rocket_chery3" parent="enemies" instance=ExtResource("25_m5tbf")]
+[node name="rocket_chery3" parent="enemies" instance=ExtResource("16_gk8aa")]
 position = Vector2(1332, 116)
 
-[node name="rocket_chery4" parent="enemies" instance=ExtResource("25_m5tbf")]
+[node name="rocket_chery4" parent="enemies" instance=ExtResource("16_gk8aa")]
 position = Vector2(1380, 141)
 
 [node name="boxes" type="Node2D" parent="."]
 position = Vector2(340, -4)
 
-[node name="break-box" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(-60, 101)
 
-[node name="break-box2" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box2" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(-44, 101)
 
-[node name="break-box3" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box3" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(-28, 101)
 
-[node name="break-box4" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box4" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(-12, 101)
 
-[node name="break-box5" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box5" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(492, -63)
 
-[node name="break-box6" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box6" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(508, -63)
 
-[node name="break-box7" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box7" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(524, -63)
 
-[node name="break-box8" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box8" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(540, -63)
 
-[node name="break-box9" parent="boxes" instance=ExtResource("13_q3xs6")]
+[node name="break-box9" parent="boxes" instance=ExtResource("17_a4v76")]
 position = Vector2(556, -63)
 
 [node name="checkpoints" type="Node2D" parent="."]
 position = Vector2(340, -4)
 
-[node name="checkpoint" parent="checkpoints" instance=ExtResource("26_tafl3")]
+[node name="checkpoint" parent="checkpoints" instance=ExtResource("18_n2t4w")]
 position = Vector2(593, -33)
 
-[node name="goal" parent="." instance=ExtResource("19_meqwx")]
+[node name="goal" parent="." instance=ExtResource("19_7er6q")]
 position = Vector2(1920, 108)
-next_level = "res://levels/world_02.tscn"
 
 [node name="transition" type="CanvasLayer" parent="."]
-script = ExtResource("20_gd1pf")
+script = ExtResource("20_iduin")
 
 [node name="color_rect" type="ColorRect" parent="transition"]
 material = SubResource("ShaderMaterial_kqcyc")
@@ -539,9 +538,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
-script = ExtResource("21_ax0k4")
+script = ExtResource("22_jadc0")
 
-[node name="player" parent="." instance=ExtResource("3_23rkk")]
+[node name="player" parent="." instance=ExtResource("23_2e4wk")]
 position = Vector2(70, 140)
 
 [node name="HUD" type="CanvasLayer" parent="."]
@@ -553,7 +552,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("17_pvla3")
+script = ExtResource("24_com3m")
 default_minutes = 5
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
@@ -587,7 +586,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "000"
 
@@ -601,7 +600,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "TIME"
 
@@ -610,7 +609,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "00:00"
 
@@ -624,7 +623,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "SCORE"
 
@@ -633,7 +632,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "00000"
 
@@ -646,14 +645,14 @@ size_flags_vertical = 4
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
-texture = ExtResource("23_75f6c")
+texture = ExtResource("30_gkn1a")
 
 [node name="life_separator" type="Label" parent="HUD/control/container/life_container"]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "X"
 
@@ -662,11 +661,11 @@ layout_mode = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
-theme_override_fonts/font = ExtResource("22_85xjn")
+theme_override_fonts/font = ExtResource("29_qof3d")
 theme_override_font_sizes/font_size = 8
 text = "00"
 
-[node name="pause_menu" parent="." instance=ExtResource("27_unkoe")]
+[node name="pause_menu" parent="." instance=ExtResource("31_hwh8h")]
 
 [node name="camera" type="Camera2D" parent="."]
 position = Vector2(362, 72)
