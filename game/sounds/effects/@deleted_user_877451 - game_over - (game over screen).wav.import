@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dulue5cqjy3ml"
+path="res://.godot/imported/@deleted_user_877451 - game_over - (game over screen).wav-8373c452c477358e73e5820b52efcf48.sample"
+
+[deps]
+
+source_file="res://sounds/effects/@deleted_user_877451 - game_over - (game over screen).wav"
+dest_files=["res://.godot/imported/@deleted_user_877451 - game_over - (game over screen).wav-8373c452c477358e73e5820b52efcf48.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dheiwagnss4pd"]
+[gd_scene load_steps=45 format=3 uid="uid://dheiwagnss4pd"]
 
 [ext_resource type="Script" path="res://scripts/world_01.gd" id="1_x00vs"]
 [ext_resource type="Texture2D" uid="uid://duifxks8jq5hy" path="res://assets/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="1_y1jve"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://ovq5c4oicdgu" path="res://prefabs/break_box.tscn" id="13_q3xs6"]
 [ext_resource type="Script" path="res://scripts/warning_sign.gd" id="15_31qna"]
 [ext_resource type="Texture2D" uid="uid://caolrq738vm2v" path="res://assets/Mini FX, Items & UI/Mini UI/Speech_Emotes (16 x 16).png" id="16_qof5x"]
+[ext_resource type="PackedScene" uid="uid://l7uev7wtew2v" path="res://actors/t_rex.tscn" id="17_1n0uh"]
 [ext_resource type="Script" path="res://scripts/hud_manager.gd" id="17_pvla3"]
 [ext_resource type="Texture2D" uid="uid://dgfvrh8yg3sch" path="res://assets/Coin-Sprites/00_Coin-Sprites.png" id="18_ew10b"]
 [ext_resource type="PackedScene" uid="uid://ccihk80ve2b21" path="res://prefabs/goal.tscn" id="19_meqwx"]
@@ -477,17 +478,18 @@ position = Vector2(280, 139)
 [node name="pumpkin3" parent="enemies" instance=ExtResource("12_3foto")]
 position = Vector2(363, 140)
 
-[node name="rocket_chery" parent="enemies" instance=ExtResource("25_m5tbf")]
-position = Vector2(837, 127)
-
 [node name="rocket_chery2" parent="enemies" instance=ExtResource("25_m5tbf")]
-position = Vector2(1276, 136)
+position = Vector2(828, 129)
 
 [node name="rocket_chery3" parent="enemies" instance=ExtResource("25_m5tbf")]
-position = Vector2(1332, 116)
+position = Vector2(884, 109)
 
 [node name="rocket_chery4" parent="enemies" instance=ExtResource("25_m5tbf")]
-position = Vector2(1380, 141)
+position = Vector2(932, 134)
+
+[node name="t_rex" parent="enemies" node_paths=PackedStringArray("target") instance=ExtResource("17_1n0uh")]
+position = Vector2(1476, 160)
+target = NodePath("../../player")
 
 [node name="boxes" type="Node2D" parent="."]
 position = Vector2(340, -4)
